@@ -1,0 +1,138 @@
+body {
+  background-color: var(--main-bg);
+  font-family: 'Outfit', sans-serif;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 25px;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 12px;
+  background-color: var(--card-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 280px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+}
+
+.card .img-link {
+  position: relative;
+  display: flex;
+}
+
+.card .img-link .img-1 {
+  width: 100%;
+  border-radius: 7px;
+}
+
+.card .img-link::before {
+  content: '';
+  background-color: var(--prime-medium);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  border-radius: 7px;
+  transition: 0.3s ease-in-out;
+}
+
+.card .img-link::after {
+  content: '';
+  background: url(../src/images/icon-view.svg) no-repeat center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border-radius: 7px;  
+  transition: 0.3s ease-in-out;
+}
+
+.card .img-link:hover::before {
+  opacity: 0.3;
+}
+
+.card .img-link:hover::after {
+  opacity: 1;
+}
+
+.card .title {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.card .title:hover {
+  color: var(--prime-medium);
+  cursor: pointer;
+}
+
+.card .nft-description {
+  color: var(--prime-soft);
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.card .price-day {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card  .price, .card .day {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card .price p {
+  color: var(--prime-medium);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.card .price img, .card .day img {
+  height: 12px;
+}
+
+.card .day p {
+  color: var(--prime-soft);
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.card .creator {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  border-top: 1px solid var(--line-color);
+  padding-top: 15px;
+}
+
+.card .creator .avatar {
+  max-width: 25px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.card .creator .name {
+  font-weight: 300;
+  color: var(--prime-soft);
+  font-size: 13px;
+}
+
+.card .creator .name a {
+  color: white;
+  font-weight: 400;
+  transition: 0.3s;
+}
+
+.card .creator .name a:hover {
+  color: var(--prime-medium);
+}
